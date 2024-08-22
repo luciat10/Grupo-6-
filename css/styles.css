@@ -1,6 +1,42 @@
 .jumbotron,
 .card-body,
-.container,
+
+.login {
+  background-color: rgb(243, 241, 238);
+}
+
+.mt-5 img {
+  width: 1440px;
+  height: 252px;
+}
+
+.container h3{
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+  font-style: normal;
+  font-size: 36px;
+}
+
+.container p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+  font-style: normal;
+  font-size: 16px;
+}
+
+.container label {
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.container input{
+  border: 2px solid rgb(164,72,255);
+  width: 830px;
+  height: 83px;
+  background-color: rgb(243,241,238);
+  padding: 20px;
+  border-radius: 10px;
+}
+
 .site-header {
   font-family: 'Verdana', serif !important;
 }
