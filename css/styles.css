@@ -11,14 +11,17 @@
 }
 
 .mt-5 p {
-  text-align: ;
+text-align: center;
 }
 
-.mt-5 reg {
+.mt-5 a {
+  color: black;
   font-weight: bold;
 }
 
-.container {
+.mt-5 .container {
+  display: grid;
+  justify-content: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -27,7 +30,7 @@
   font-size: 36px;
 }
 
-.container p {
+.container h4 {
   font-style: normal;
   font-size: 16px;
 }
@@ -44,6 +47,16 @@
   background-color: rgb(243,241,238);
   padding: 20px;
   border-radius: 10px;
+}
+
+.container button {
+  width: 830px;
+  height: 83px;
+  border-radius: 10px;
+  background: linear-gradient(to right, #A448FF, #DA48FF);
+  color: white;
+  font-weight: bold;
+  border: 2px solid #A448FF;
 }
 
 .site-header {
