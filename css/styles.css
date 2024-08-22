@@ -10,20 +10,29 @@
   height: 252px;
 }
 
+.mt-5 p {
+  text-align: ;
+}
+
+.mt-5 reg {
+  font-weight: bold;
+}
+
+.container {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .container h3{
-  font-family: Verdana, Geneva, Tahoma, sans-serif
   font-style: normal;
   font-size: 36px;
 }
 
 .container p {
-  font-family: Verdana, Geneva, Tahoma, sans-serif
   font-style: normal;
   font-size: 16px;
 }
 
 .container label {
-  font-family: Verdana, Geneva, Tahoma, sans-serif
   font-weight: bold;
   font-size: 24px;
 }
