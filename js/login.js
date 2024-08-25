@@ -1,5 +1,5 @@
-document addEventListener("DomContentLoaded", => {
-    let login= document.getElementById(login); 
+document addEventListener("DomContentLoaded", ()=> {
+    let login = document.getElementById("login"); 
     login.addEventListener("click", () => {
         let usuario = document.getElementById("usuario").value;
         let contraseña = document.getElementById("contraseña").value;
