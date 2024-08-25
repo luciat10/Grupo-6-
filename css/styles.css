@@ -5,9 +5,12 @@
   background-color: rgb(243, 241, 238);
 }
 
-.mt-5 img {
+header {
+  background-color: white;
   width: 1440px;
-  height: 252px;
+  height: 246px;
+  display: flex;
+  justify-content: center;
 }
 
 .mt-5 p {
