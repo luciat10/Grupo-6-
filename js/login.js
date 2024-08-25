@@ -1,4 +1,4 @@
-document addEventListener("DomContentLoaded", () => {
+document.addEventListener("DomContentLoaded", () => {
     let login = document.getElementById("login"); 
     login.addEventListener("click", () => {
         let usuario = document.getElementById("usuario").value;
