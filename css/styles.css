@@ -1,6 +1,64 @@
 .jumbotron,
 .card-body,
-.container,
+
+.login {
+  background-color: rgb(243, 241, 238);
+}
+
+.mt-5 img {
+  width: 1440px;
+  height: 252px;
+}
+
+.mt-5 p {
+text-align: center;
+}
+
+.mt-5 a {
+  color: black;
+  font-weight: bold;
+}
+
+.mt-5 .container {
+  display: grid;
+  justify-content: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container h3{
+  font-style: normal;
+  font-size: 36px;
+}
+
+.container h4 {
+  font-style: normal;
+  font-size: 16px;
+}
+
+.container label {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.container input{
+  border: 2px solid rgb(164,72,255);
+  width: 830px;
+  height: 83px;
+  background-color: rgb(243,241,238);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.container button {
+  width: 830px;
+  height: 83px;
+  border-radius: 10px;
+  background: linear-gradient(to right, #A448FF, #DA48FF);
+  color: white;
+  font-weight: bold;
+  border: 2px solid #A448FF;
+}
+
 .site-header {
   font-family: 'Verdana', serif !important;
 }
