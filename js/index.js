@@ -14,10 +14,10 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 
 //validar que el localStorage esta en el navegador(si se inicia sesión)
-letObjUsuario =JSON.parse(localStorage.getItem("usuario"));
-if(!localStorage.getItem("usuario") && !localStorage.getItem("contraseña")) {
+letObjUsuario =JSON.parse(localStorage.getItem("username"));
+if(!localStorage.getItem("usuario") && !localStorage.getItem("password")) {
     location.href = "login.html"
 }
-if (localStorage.getItem("usuario") && localStorage.getItem("contraseña")) {
+if (localStorage.getItem("username") && localStorage.getItem("password")) {
     document.getElementById("user").innerHTML = "Cliente:" + letObjUsuario;
 }
