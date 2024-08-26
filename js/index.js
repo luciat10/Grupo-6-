@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 //validar que el localStorage esta en el navegador(si se inicia sesión)
 letObjUsuario =JSON.parse(localStorage.getItem("usuario"));
-if(!localStorage.getItem("usuarrio") && !localStorage.getItem("cntraseña")) {
+if(!localStorage.getItem("usuario") && !localStorage.getItem("contraseña")) {
     location.href = "login.html"
 }
 if (localStorage.getItem("usuario") && localStorage.getItem("contraseña")) {
