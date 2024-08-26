@@ -9,17 +9,17 @@ function login() {
     }
 }
 
-document.addEventListener("DomContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
     let login = document.getElementById("login"); 
     login.addEventListener("click", () => {
-        let usuario = document.getElementById("usuario").value;
-        let contraseña = document.getElementById("contraseña").value;
+        let usuario = document.getElementById("username").value;
+        let contraseña = document.getElementById("password").value;
           //guardo sesion con localStorage
-          localStorage.setItem("usuario", JSON.stringify(ususario));
-          localStorage.setItem("contraseña", JSON.stringify(contraseña));
-          let ObjUsuario = JSON.parse(localStorage.getItem("usuario"));
-          let ObjContraseña =JSON.parse(localStorage.getItem("contraseña"));
-          if(usuario!="" && contraseña!=""){
+          localStorage.setItem("username", JSON.stringify(username));
+          localStorage.setItem("password", JSON.stringify(password));
+          let ObjUsuario = JSON.parse(localStorage.getItem("username"));
+          let ObjContraseña =JSON.parse(localStorage.getItem("password"));
+          if(username!="" && password!=""){
             window.location.href= "index.html";
           }
     })
