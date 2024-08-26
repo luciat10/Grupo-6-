@@ -1,4 +1,17 @@
-document addEventListener("DomContentLoaded", () => {
+function login() {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    const errorMessage = document.getElementById('error-message');
+
+    if (username.trim() === '' || password.trim() === ''){
+        alert("Por favor, complete ambos campos.")
+    } else {
+        window.location.href = 'index.html';
+    }
+}
+
+document.addEventListener("DomContentLoaded", () => {
     let login = document.getElementById("login"); 
     login.addEventListener("click", () => {
         let usuario = document.getElementById("usuario").value;
