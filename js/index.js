@@ -13,11 +13,12 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 });
 
-//validar que el localStorage esta en el navegador(si se inicia sesión)
-letObjUsuario =JSON.parse(localStorage.getItem("usuario"));
-if(!localStorage.getItem("usuarrio") && !localStorage.getItem("cntraseña")) {
-    location.href = "login.html"
-}
-if (localStorage.getItem("usuario") && localStorage.getItem("contraseña")) {
-    document.getElementById("user").innerHTML = "Cliente:" + letObjUsuario;
+
+window.onload = function(){
+    const username = localStorage.getItem('username');
+    const password = localStorage.getItem('password');
+
+    if (!username && !password){
+        window.location.href = 'login.html';
+    }
 }
