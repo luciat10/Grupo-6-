@@ -14,3 +14,11 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 
 
+window.onload = function(){
+    const username = localStorage.getItem('username');
+    const password = localStorage.getItem('password');
+
+    if (!username && !password){
+        window.location.href = 'login.html';
+    }
+}
