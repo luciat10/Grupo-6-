@@ -7,8 +7,7 @@
 
 header {
   background-color: white;
-  width: 1440px;
-  height: 246px;
+  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -20,31 +19,33 @@ header {
 
 .container h3{
   font-style: normal;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 .container h4 {
   font-style: normal;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .container label {
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.2rem;
 }
 
 .container input{
   border: 2px solid rgb(164,72,255);
   width: 45rem;
+  max-width: 100vh;
   height: 6rem;
   background-color: rgb(243,241,238);
   border-radius: 1rem;
-  padding: 10px;
+  padding: 20px;
 }
 
 .container button {
   width: 45rem;
   height: 6rem;
+  max-width: 50vh;
   border-radius: 1rem;
   background: linear-gradient(to right, #A448FF, #DA48FF);
   color: white;
@@ -70,8 +71,11 @@ nav a {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none;
-}
+  user-select: none;}
+
+  .img-login {
+    justify-content: center;
+  }
 
 @media (min-width: 768px) {
   .bd-placeholder-img-lg {
