@@ -5,8 +5,8 @@ function login() {
     if (username.trim() === '' || password.trim() === ''){
         alert("Por favor, complete ambos campos.")
     } else {
-        localStorage.setItem ('username', 'true');
-        localStorage.setItem ('password', 'true');
+        localStorage.setItem ('username', username);
+        localStorage.setItem ('password', password);
         
         window.location.href = 'index.html';
     }

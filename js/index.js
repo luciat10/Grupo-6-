@@ -22,3 +22,10 @@ window.onload = function(){
         window.location.href = 'login.html';
     }
 }
+if (localStorage.getItem("username") && localStorage.getItem("password")) {
+    const username = localStorage.getItem("username");
+    const userElement = document.getElementById("user");
+    if (userElement) {
+      userElement.innerHTML = "Cliente: " + username;
+    }
+}
