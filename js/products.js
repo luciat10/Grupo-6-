@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function showData(dataArray) {
         for (const item of dataArray) {
             const productCard = document.createElement('div');
+
             productCard.className = 'col-lg-3 col-md-4 col-sm-6 col-12 mb-4'; 
             productCard.innerHTML = `
             <div id="articulos-autos" class="product-card">    
