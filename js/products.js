@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function showData(dataArray) {
         for (const item of dataArray) {
             const productCard = document.createElement('div');
-            productCard.className = 'product-card';
+            productCard.className = 'product-card col-12 col-md-6 col-lg-4';
             productCard.innerHTML = `
                 <div class="product-image">
                     <img src="${item.image}" alt="${item.name}">
