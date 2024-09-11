@@ -11,9 +11,6 @@ header {
     padding: 20px 0;
 }
 
-.button-group {
-    margin-top: 20px;
-}
 
 .button {
     padding: 10px 20px;
@@ -28,6 +25,13 @@ header {
 .button:hover {
     background-color: #0056b3;
 }
+
+.inputPrecio{
+    padding: 3px;
+    width: 140px;
+}
+
+
 
 .product-card {
     background-color: #fff;
