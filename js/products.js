@@ -85,7 +85,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById('filtMin').value = ''; // Limpiar los campos de filtro
                 document.getElementById('filtMax').value = '';
             };
-            /* Fución para buscar los prductos*/
+
+            /* Función para buscar los prductos*/
             const buscarProductos = () => {
                 const searchTerm = document.getElementById('search').value.toLowerCase();
                 const productosBuscados = productosFiltrados.filter(producto => 
@@ -94,6 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 );
                 renderizarProductos(productosBuscados);
             };
+
 
             // Añadir eventos a los botones de ordenación
             document.querySelector('#sortByCount').addEventListener('click', () => ordenarProductoPorRelev(productosFiltrados));
@@ -104,9 +106,10 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById('filtrar').addEventListener('click', filtrarProductosPorPrecio);
             document.getElementById('limpiarFiltros').addEventListener('click', limpiarFiltros);
 
+
             /*Añadir evento para el botón de buscar*/
             document.getElementById('search').addEventListener('input', buscarProductos);
-
+      
             // Renderizado inicial de los productos (en cualquier orden)
             renderizarProductos(productosOriginales);
         })

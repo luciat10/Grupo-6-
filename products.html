@@ -37,10 +37,21 @@
     <div class="container">
       <header>
         <h1>Productos</h1>
-        <p>Verás aquí todos los productos de la lista de autos.</p>
+        <p>Verás aquí todos los productos de la lista.</p>
         <div class="button-group">
-          <button class="button">Filtrar</button>
-          <button class="button">Ocultar Filtro</button>
+            <label class="btn btn-light" for="inputPrecio">Precio:</label>
+            <input type="text" name="options" id="filtMin" placeholder="min" class="inputPrecio"> - 
+            <input type="text" name="options" id="filtMax" placeholder="max" class="inputPrecio">
+            <button class="button" id="filtrar">Filtrar</button>
+            <button class="button" id="limpiarFiltros">Ocultar Filtro</button>           
+            <input type="radio" class="btn-check" name="options" id="sortAsc">
+            <label class="btn btn-light" for="sortAsc">Menor precio</label>
+            <input type="radio" class="btn-check" name="options" id="sortDesc">
+            <label class="btn btn-light" for="sortDesc">Mayor precio</label> 
+            <input type="radio" class="btn-check" name="options" id="sortByCount" checked>
+            <label class="btn btn-light" for="sortByCount"><i class="fas fa-sort-amount-down mr-1"></i></label>
+          </div>
+          
         </div>
         <!--Agrregué el botón para busqueda-->
         <div class="search-controls">
@@ -48,7 +59,7 @@
           <input type="search" id="search" name="search" placeholder="Buscar productos...">
         </div>
       </header>
-      <div class="products-grid" id="products-grid">
+      <div class="row" id="products-grid">
       </div>
     </div>
   </main>
