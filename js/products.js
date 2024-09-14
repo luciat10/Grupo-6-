@@ -111,3 +111,4 @@ document.addEventListener("DOMContentLoaded", function () {
             console.error('Error al cargar los datos:', error); // Maneja errores en caso de que la carga de datos falle
         });
 });
+   
