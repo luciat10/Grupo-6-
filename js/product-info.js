@@ -1,82 +1,47 @@
-function cambioImagen() {
-    var imagen = document.getElementById("imagen");
-    if ( imagen.src.includes("img/prod50921_2.jpg")) {
-        imagen.src = "img/prod50921_1.jpg";
+document.addEventListener("DOMContentLoaded", function () {
+    // Obtener el ID del producto desde localStorage
+    const productoID = localStorage.getItem('productoID');
+    
+    if (productoID) {
+        // Construir la URL con el ID del producto
+        const DATA_URL = `https://japceibal.github.io/emercado-api/products/${productoID}.json`;
+        
+        // Hacer la solicitud al archivo JSON
+        fetch(DATA_URL)
+            .then(response => response.json())
+            .then(data => {
+                if (data) {
+                    const producto = data; 
+
+                    // Mostrar los detalles del producto en la página
+                    document.getElementById('product-name').textContent = producto.name;
+                    document.getElementById('product-description').textContent = producto.description;
+                    document.getElementById('product-price').textContent = `Precio: ${producto.currency} ${producto.cost}`;
+
+                    // Verificar si el producto tiene imágenes
+                    if (producto.images && Array.isArray(producto.images)) {
+                        const imageContainer = document.getElementById('product-images');
+                        imageContainer.innerHTML = ''; // Limpiar el contenedor de imágenes
+
+                        // Iterar sobre cada imagen y crear un elemento <img> para cada una
+                        producto.images.forEach(imageUrl => {
+                            const imgElement = document.createElement('img');
+                            imgElement.src = imageUrl;
+                            imgElement.alt = producto.name;
+                            imgElement.classList.add('product-images'); 
+                            imageContainer.appendChild(imgElement);
+                        });
+
+                    } else {
+                        console.error('No se encontraron imágenes para este producto');
+                    } 
+
+                } else {
+                    console.error('No se encontró el producto en el JSON');
+                } 
+            })
+            .catch(error => console.error('Error al cargar los detalles del producto:', error));
     } else {
-        imagen.src = "img/prod50921_2.jpg";
+        console.error('No se encontró el ID del producto en localStorage.');
     }
-}
-function cambioImagen4() {
-    var imagen = document.getElementById("imagen");
-    if ( imagen.src.includes("img/prod50921_4.jpg")) {
-        imagen.src = "img/prod50921_1.jpg";
-    } else {
-        imagen.src = "img/prod50921_4.jpg";
-    }
-}
-
-function cambioImagen3() {
-    var imagen = document.getElementById("imagen");
-    if ( imagen.src.includes("img/prod50921_3.jpg")) {
-        imagen.src = "img/prod50921_1.jpg";
-    } else {
-        imagen.src = "img/prod50921_3.jpg";
-    }
-}
-
-function cambioImagen5() {
-    var imagen = document.getElementById("imagen");
-    if ( imagen.src.includes("img/prod50921_5.jpg")) {
-        imagen.src = "img/prod50921_1.jpg";
-    } else {
-        imagen.src = "img/prod50921_5.jpg";
-    }
-}
-
-
-    // Almacenar el ID del producto cuando se haga clic en "Ver detalles"
-    document.querySelectorAll('.select-product-btn').forEach(button => {
-        button.addEventListener('click', function() {
-          const productId = this.getAttribute('data-id'); // Obtiene el ID del producto
-          localStorage.setItem('selectedProductId', productId); // Almacena en localStorage
-          window.location.href = 'product-info.html'; // Redirige a product-info.html
-        });
-      });
-
-
-// Recuperar el identificador del producto almacenado en localStorage
-const productId = localStorage.getItem('selectedProductId');
-
-if (productId) {
-    // Simulación de datos del producto
-    const fakeProductData = {
-        "50921": {
-            name: "Chevrolet Onix Joy",
-            description: "Generación 2019. Variedad de colores, modelo 1.0, ideal para la ciudad.",
-            price: "USD 13.500",
-            category: "Autos",
-            soldCount: 14,
-            image: "img/prod50921_1.jpg"
-        }
-    };
-
-    // Obtener los detalles del producto basado en el productId
-    const productData = fakeProductData[productId];
-
-    if (productData) {
-        // Actualizar la información en la página
-        document.getElementById('product-name').textContent = productData.name;
-        document.getElementById('product-description').textContent = productData.description;
-        document.getElementById('product-price').textContent = productData.price;
-        document.getElementById('product-category').textContent = productData.category;
-        document.getElementById('product-sold-count').textContent = `Cantidad vendida: ${productData.soldCount}`;
-        document.getElementById('product-image').src = productData.image;
-    } else {
-        console.log('Producto no encontrado');
-    }
-} else {
-    console.log('No se seleccionó ningún producto.');
-}
-
-
-
+});

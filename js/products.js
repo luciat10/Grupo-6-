@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         // Redirigir a la página de información del producto
                         window.location.href = 'product-info.html';
                     });
-                    
+
                     container.appendChild(productCard);
                 });
             };
@@ -95,17 +95,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById('filtMax').value = '';
             };
 
-            /* Función para buscar los prductos*/
-            const buscarProductos = () => {
-                const searchTerm = document.getElementById('search').value.toLowerCase();
-                const productosBuscados = productosFiltrados.filter(producto => 
-                    producto.name.toLowerCase().includes(searchTerm) || 
-                    producto.description.toLowerCase().includes(searchTerm)
-                );
-                renderizarProductos(productosBuscados);
-            };
-
-
             // Añadir eventos a los botones de ordenación
             document.querySelector('#sortByCount').addEventListener('click', () => ordenarProductoPorRelev(productosFiltrados));
             document.querySelector('#sortAsc').addEventListener('click', () => ordenarProductoPorPrecioAsc(productosFiltrados));
@@ -115,10 +104,6 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById('filtrar').addEventListener('click', filtrarProductosPorPrecio);
             document.getElementById('limpiarFiltros').addEventListener('click', limpiarFiltros);
 
-
-            /*Añadir evento para el botón de buscar*/
-            document.getElementById('search').addEventListener('input', buscarProductos);
-      
             // Renderizado inicial de los productos (en cualquier orden)
             renderizarProductos(productosOriginales);
         })
@@ -126,3 +111,4 @@ document.addEventListener("DOMContentLoaded", function () {
             console.error('Error al cargar los datos:', error); // Maneja errores en caso de que la carga de datos falle
         });
 });
+   
