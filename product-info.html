@@ -35,19 +35,30 @@
         </ul>
       </div>
     </div>
-  </nav>
-  <main>
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+   
+    <div class="contenedor"> 
+      <div class="encabeza">
+        <h4 class="volvemos">volver al listado</h4>
+        <button id="agregamos">Agregar al carrito</button>
       </div>
-    </div>
-  </main>
+     
+
+    <div class="container"> <!-- Sección de la imagen del producto y las miniaturas -->
+       <div class="product-images-container"> 
+        <div class="thumbnails"> 
+      <img src="img/prod50921_2.jpg" alt="Chevrolet Onix Joy miniatura" onclick="cambioImagen()"> <!-- agregue un onclick -->
+      <img src="img/prod50921_4.jpg" alt="Vista frontal miniatura Chevrolet Onix Joy" onclick="cambioImagen4()"> 
+      <img src="img/prod50921_3.jpg" alt="Vista trasera miniatura Chevrolet Onix Joy" onclick="cambioImagen3()"> 
+      <img src="img/prod50921_5.jpg" alt="Interior miniatura Chevrolet Onix Joy" onclick="cambioImagen5()"> </div> 
+      <div class="main-image"> <img id="imagen" src="img/prod50921_1.jpg" alt="Chevrolet Onix Joy"> </div> <!-- agregue el ID -->
+
   <footer class="text-muted">
     <div class="container">
       <p class="float-end">
         <a href="#">Volver arriba</a>
       </p>
+
+      
       <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a></p>
     </div>
   </footer>
