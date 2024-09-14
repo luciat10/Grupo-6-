@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>eMercado - Todo lo que busques está aquí</title>
-
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
-
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
     <div class="container">
@@ -38,8 +35,31 @@
   </nav>
   <main class="pb-5 container">
     <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+      <header>
+        <h1>Productos</h1>
+        <p>Verás aquí todos los productos de la lista.</p>
+        <div class="button-group">
+            <label class="btn btn-light" for="inputPrecio">Precio:</label>
+            <input type="text" name="options" id="filtMin" placeholder="min" class="inputPrecio"> - 
+            <input type="text" name="options" id="filtMax" placeholder="max" class="inputPrecio">
+            <button class="button" id="filtrar">Filtrar</button>
+            <button class="button" id="limpiarFiltros">Ocultar Filtro</button>           
+            <input type="radio" class="btn-check" name="options" id="sortAsc">
+            <label class="btn btn-light" for="sortAsc">Menor precio</label>
+            <input type="radio" class="btn-check" name="options" id="sortDesc">
+            <label class="btn btn-light" for="sortDesc">Mayor precio</label> 
+            <input type="radio" class="btn-check" name="options" id="sortByCount" checked>
+            <label class="btn btn-light" for="sortByCount"><i class="fas fa-sort-amount-down mr-1"></i></label>
+          </div>
+          
+        </div>
+        <!--Agrregué el botón para busqueda-->
+        <div class="search-controls">
+          <label for="search">Buscar:</label>
+          <input type="search" id="search" name="search" placeholder="Buscar productos...">
+        </div>
+      </header>
+      <div class="row" id="products-grid">
       </div>
     </div>
   </main>
@@ -63,5 +83,4 @@
   <script src="js/init.js"></script>
   <script src="js/products.js"></script>
 </body>
-
 </html>

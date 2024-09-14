@@ -12,3 +12,20 @@ document.addEventListener("DOMContentLoaded", function(){
         window.location = "products.html"
     });
 });
+
+
+window.onload = function(){
+    const username = localStorage.getItem('username');
+    const password = localStorage.getItem('password');
+
+    if (!username && !password){
+        window.location.href = 'login.html';
+    }
+}
+if (localStorage.getItem("username") && localStorage.getItem("password")) {
+    const username = localStorage.getItem("username");
+    const userElement = document.getElementById("user");
+    if (userElement) {
+      userElement.innerHTML = "Cliente: " + username;
+    }
+}
