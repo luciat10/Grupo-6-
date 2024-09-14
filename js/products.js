@@ -46,6 +46,15 @@ document.addEventListener("DOMContentLoaded", function () {
                             </div>
                         </div>
                     `;
+                    
+                    productCard.addEventListener('click', () => {
+                        // Guardar el ID del producto en localStorage
+                        localStorage.setItem('productoID', item.id);
+            
+                        // Redirigir a la página de información del producto
+                        window.location.href = 'product-info.html';
+                    });
+
                     container.appendChild(productCard);
                 });
             };
