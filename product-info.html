@@ -37,14 +37,36 @@
     </div>
   </nav>
   <main class="container">
-    <h1 id="product-name"></h1>
-    <div id="product-info">
-      <div id="product-images"></div>
+    <div id="product-details-container" class="product-layout">
+        <!-- Sección de la galería -->
+        <div id="product-gallery" class="gallery-container">
+            <!-- Contenedor de miniaturas -->
+            <div id="thumbnails-container" class="thumbnails">
+                <!-- Aquí se mostrarán las miniaturas -->
+            </div>
+            <!-- Imagen principal -->
+            <div id="main-image-container">
+                <img id="main-image" src="" alt="Imagen principal del producto">
+            </div>
+        </div>
 
-      <p id="product-description"></p>
-      <p id="product-price"></p>
+        <!-- Sección de detalles del producto -->
+        <div id="product-info">
+            <h1 id="product-name"></h1>
+            <p id="product-description"></p>
+            <p id="product-price"></p>
+
+            <!-- Agregar cuadro de comentarios y puntuación -->
+            <div id="product-comments">
+                <h3>Comentarios y Puntuación</h3>
+                <textarea id="comment-box" rows="4" cols="50" placeholder="Escribe tu comentario..."></textarea>
+                <br>
+                <button type="button" id="submit-comment">Enviar comentario</button>
+            </div>
+        </div>
     </div>
-  </main>
+</main>
+
   <footer class="text-muted">
     <div class="container">
       <p class="float-end">
