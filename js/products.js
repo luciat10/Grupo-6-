@@ -95,6 +95,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById('filtMax').value = '';
             };
 
+            /* Función para buscar los prductos*/
+            const buscarProductos = () => {
+                const searchTerm = document.getElementById('search').value.toLowerCase();
+                const productosBuscados = productosFiltrados.filter(producto => 
+                    producto.name.toLowerCase().includes(searchTerm) || 
+                    producto.description.toLowerCase().includes(searchTerm)
+                );
+                renderizarProductos(productosBuscados);
+            };
+
             // Añadir eventos a los botones de ordenación
             document.querySelector('#sortByCount').addEventListener('click', () => ordenarProductoPorRelev(productosFiltrados));
             document.querySelector('#sortAsc').addEventListener('click', () => ordenarProductoPorPrecioAsc(productosFiltrados));
