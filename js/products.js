@@ -114,6 +114,9 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById('filtrar').addEventListener('click', filtrarProductosPorPrecio);
             document.getElementById('limpiarFiltros').addEventListener('click', limpiarFiltros);
 
+            /*Añadir evento para el botón de buscar*/
+            document.getElementById('search').addEventListener('input', buscarProductos);
+
             // Renderizado inicial de los productos (en cualquier orden)
             renderizarProductos(productosOriginales);
         })
